@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(RoomController.BASE_URL)
@@ -31,9 +32,12 @@ public class RoomController {
     }
 
     @GetMapping({"","/"})
-    public List<Room> getAllUser(){
+    public List<Room> getAllRooms(){
         return roomService.getAllRooms();
     }
 
-
+    @GetMapping({"/{roomName}"})
+    public Optional<RoomEntity> getRoomById(@PathVariable String roomName){
+        return roomService.getRoomById(roomName);
+    }
 }

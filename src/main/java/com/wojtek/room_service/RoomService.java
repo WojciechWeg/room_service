@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RoomService {
@@ -66,5 +67,9 @@ public class RoomService {
             list.add(room);
         }
         return list;
+    }
+
+    public Optional<RoomEntity> getRoomById(String roomName) {
+       return roomRepository.findById(roomName);
     }
 }
