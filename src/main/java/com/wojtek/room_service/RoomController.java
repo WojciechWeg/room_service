@@ -19,7 +19,7 @@ public class RoomController {
     }
 
     @PutMapping()
-    public void createNewUser(@Valid @RequestBody Room room) {
+    public void createNewURoom(@Valid @RequestBody Room room) {
         roomService.createNewRoom(room);
     }
 
