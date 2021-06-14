@@ -1,6 +1,6 @@
 spring:
   application:
-    name: room-service-eureka-client
+    name: ROOM-SERVICE
 server:
   port: 0
 eureka:
